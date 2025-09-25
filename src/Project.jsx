@@ -7,7 +7,7 @@ export default function Project({checked, projectLink, imageName, projectName, p
   return (
     <div className='projects-warpper'>
         <div className="projects-project" onClick={()=>window.open(`${projectLink}`, "_blank")} style={{backgroundColor:checked?'black':'white', border:checked?'1px solid #1a1a1a':'1px solid #E5E2E2'}}>
-            <img src={`src/assets/images/${imageName}`} alt={alt} className="project-image" />
+            <img src={`/assets/images/${imageName}`} alt={alt} className="project-image" />
             <h1 className="project-title">{projectName}</h1>
             <p className="project-text">{projectText}</p>
             <ul className="programming-language">
