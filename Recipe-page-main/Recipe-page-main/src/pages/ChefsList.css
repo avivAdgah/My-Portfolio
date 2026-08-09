@@ -1,0 +1,26 @@
+.chefs-list {
+  padding: var(--space-7) 0 var(--space-8);
+}
+
+.chefs-list-header {
+  text-align: center;
+  margin-bottom: var(--space-7);
+}
+
+.chefs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-5);
+}
+
+@media (max-width: 900px) {
+  .chefs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .chefs-grid {
+    grid-template-columns: 1fr;
+  }
+}

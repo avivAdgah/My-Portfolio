@@ -1,0 +1,53 @@
+.servings-adjuster {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.servings-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.servings-control {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  background: var(--color-accent-light);
+  border-radius: var(--radius-pill);
+  padding: var(--space-1);
+}
+
+.servings-control span {
+  min-width: 6.5ch;
+  text-align: center;
+  font-weight: 700;
+  color: var(--color-accent-dark);
+}
+
+.servings-control button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-surface);
+  color: var(--color-accent-dark);
+}
+
+.servings-control button:hover:not(:disabled) {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.servings-control button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

@@ -1,0 +1,37 @@
+.instructions-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.instruction-step {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.instruction-number {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: #fff;
+  font-family: var(--font-serif);
+  font-weight: 700;
+}
+
+.instruction-body p {
+  margin: 0;
+}
+
+.instruction-image {
+  margin-top: var(--space-3);
+  border-radius: var(--radius-md);
+  width: 100%;
+}

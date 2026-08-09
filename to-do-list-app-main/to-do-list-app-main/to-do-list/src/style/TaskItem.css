@@ -1,0 +1,111 @@
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: background-color var(--transition-fast), opacity var(--transition-fast);
+}
+
+.task-item + .task-item {
+  margin-top: var(--space-2);
+}
+
+.task-item-checkbox {
+  flex-shrink: 0;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.task-item-checkbox:checked {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.task-item-checkbox:checked::after {
+  content: "\2714";
+  display: block;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: #fff;
+}
+
+.task-item-text {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: break-word;
+  font-size: 15px;
+  color: var(--color-text);
+  transition: color var(--transition-fast);
+}
+
+.task-item.is-completed .task-item-text {
+  color: var(--color-text-faint);
+  text-decoration: line-through;
+}
+
+.task-item-edit-field {
+  flex: 1;
+  min-width: 0;
+  padding: var(--space-2) var(--space-3);
+  font-size: 15px;
+  border: 1.5px solid var(--color-accent);
+  border-radius: var(--radius-sm);
+  outline: none;
+}
+
+.task-item-actions {
+  display: flex;
+  flex-shrink: 0;
+  gap: var(--space-1);
+}
+
+.task-item-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--color-text-muted);
+  font-size: 14px;
+  transition: background-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+}
+
+.task-item-button:hover {
+  transform: translateY(-1px);
+}
+
+.task-item-button.edit:hover,
+.task-item-button.save:hover {
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+}
+
+.task-item-button.delete:hover,
+.task-item-button.cancel:hover {
+  background: var(--color-danger-soft);
+  color: var(--color-danger);
+}
+
+@media (max-width: 600px) {
+  .task-item {
+    flex-wrap: wrap;
+  }
+
+  .task-item-actions {
+    margin-left: auto;
+  }
+}

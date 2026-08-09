@@ -1,0 +1,5 @@
+.about {
+  padding-top: var(--section-gap);
+  padding-bottom: var(--section-gap);
+  max-width: 780px;
+}

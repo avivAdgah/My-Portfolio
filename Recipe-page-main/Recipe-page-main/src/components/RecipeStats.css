@@ -1,0 +1,37 @@
+.recipe-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+  margin: 0;
+  padding: var(--space-5);
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+}
+
+.recipe-stat {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  color: var(--color-accent);
+}
+
+.recipe-stat dt {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.recipe-stat dd {
+  margin: 0;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+@media (max-width: 640px) {
+  .recipe-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
