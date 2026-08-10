@@ -5,15 +5,16 @@ export default function About() {
     <section id="about" className="about container">
       <h2 className="section-title">About Me</h2>
       <p className="section-text">
-        I'm a frontend developer focused on building clean, responsive
-        interfaces with React, JavaScript, and modern CSS. I care about
-        writing code that's easy to read and easy to change, and about
-        interfaces that feel fast and work well on any screen size.
+        I'm a Frontend Developer focused on building modern, responsive,
+        and user-friendly web experiences. I work with React, Next.js,
+        JavaScript, Tailwind CSS, and modern frontend technologies to turn
+        ideas and designs into functional websites and web applications.
       </p>
       <p className="section-text">
-        I'm currently looking to build more React applications with real
-        interactivity — dashboards, small tools, and product UIs — and to
-        keep leveling up on accessibility, performance, and design systems.
+        I care about clean code, responsive design, performance, and
+        creating interfaces that are simple and enjoyable to use. I can
+        help with landing pages, business websites, dashboards, and
+        interactive web applications.
       </p>
     </section>
   );

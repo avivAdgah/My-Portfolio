@@ -3,15 +3,15 @@ import "./Skills.css";
 const skillGroups = [
   {
     title: "Frontend",
-    skills: ["React", "JavaScript (ES6+)", "Vite", "HTML5"],
+    skills: ["React", "Next.js", "JavaScript (ES6+)", "HTML5"],
   },
   {
     title: "Styling",
-    skills: ["CSS3", "Responsive Design", "Flexbox & Grid"],
+    skills: ["Tailwind CSS", "CSS3", "Responsive Design", "Flexbox & Grid"],
   },
   {
     title: "Tools",
-    skills: ["Git & GitHub", "ESLint", "npm"],
+    skills: ["Git", "GitHub", "Vite", "npm", "ESLint", "VS Code"],
   },
 ];
 

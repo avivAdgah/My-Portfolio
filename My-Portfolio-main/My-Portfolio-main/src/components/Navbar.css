@@ -102,29 +102,47 @@
     top: 65px;
     left: 0;
     right: 0;
-    background-color: var(--bg);
+    background-color: var(--bg-elevated);
     border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow-md);
     max-height: 0;
     overflow: hidden;
-    transition: max-height var(--transition);
+    opacity: 0;
+    transition: max-height var(--transition), opacity var(--transition);
   }
 
   nav.nav-open {
-    max-height: 300px;
+    max-height: 320px;
+    opacity: 1;
   }
 
   .nav-links {
     flex-direction: column;
     gap: 0;
-    padding: 8px 5%;
+    padding: 8px 0;
   }
 
   .nav-links li {
-    padding: 12px 0;
     border-bottom: 1px solid var(--border);
   }
 
   .nav-links li:last-child {
     border-bottom: none;
+  }
+
+  .nav-links a {
+    display: block;
+    width: 100%;
+    padding: 16px 5%;
+  }
+
+  .nav-links a::after {
+    display: none;
+  }
+
+  .nav-links a:hover,
+  .nav-links a:active {
+    background-color: var(--bg);
+    color: var(--accent);
   }
 }

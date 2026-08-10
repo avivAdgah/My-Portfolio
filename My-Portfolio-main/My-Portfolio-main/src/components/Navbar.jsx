@@ -5,6 +5,7 @@ import "./Navbar.css";
 const links = [
   { href: "#about", label: "About" },
   { href: "#skills", label: "Skills" },
+  { href: "#services", label: "Services" },
   { href: "#projects", label: "Projects" },
   { href: "#contact", label: "Contact" },
 ];
@@ -33,7 +34,7 @@ export default function Navbar() {
 
         <div className="navbar-actions">
           <ThemeToggle />
-          <a href="#contact" className="btn btn-sm navbar-cta">
+          <a href="#contact" className="btn btn-sm btn-secondary navbar-cta">
             Let's Talk
           </a>
           <button

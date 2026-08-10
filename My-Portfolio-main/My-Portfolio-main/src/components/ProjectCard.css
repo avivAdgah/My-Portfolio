@@ -16,9 +16,23 @@
 }
 
 .project-image-wrap {
+  position: relative;
   aspect-ratio: 16 / 10;
   overflow: hidden;
   background-color: var(--border);
+}
+
+.category-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(2px);
+  padding: 4px 10px;
+  border-radius: 999px;
 }
 
 .project-card.featured .project-image-wrap {
@@ -81,6 +95,16 @@
   color: var(--text-muted);
   font-size: 0.95rem;
   flex: 1;
+}
+
+.project-highlights {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .project-tags {
