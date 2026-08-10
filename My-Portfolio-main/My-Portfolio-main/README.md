@@ -24,4 +24,4 @@
 - [React](https://react.dev/)
 
 ### Link
-- [Demo App](https://my-protfolio-aviv.netlify.app/)
+- [Demo App](https://aviv-portfolio.com/)
