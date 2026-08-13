@@ -3,7 +3,7 @@ import "./Hero.css";
 export default function Hero() {
   return (
     <section className="hero container">
-      <p className="hero-kicker">Hi, I'm Aviv GLORY & CO</p>
+      <p className="hero-kicker">Hi, I'm Aviv from GLORY & CO</p>
       <h1 className="hero-title">
         Frontend Developer Building <span>Modern, Responsive</span> Web
         Experiences
