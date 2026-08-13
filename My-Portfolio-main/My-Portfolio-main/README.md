@@ -1,6 +1,6 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">My Protfolio</h1>
+<h1 align="center">Aviv Portfolio</h1>
 
 
 <!-- TABLE OF CONTENTS -->

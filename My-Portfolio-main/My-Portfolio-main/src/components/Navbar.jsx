@@ -16,8 +16,8 @@ export default function Navbar() {
   return (
     <header className="navbar">
       <div className="navbar-inner container">
-        <a href="/" aria-label="Aviv Adgah - Home" className="logo">
-          Aviv Adgah
+        <a href="/" aria-label="Aviv Portfolio - Home" className="logo">
+          Aviv Portfolio
         </a>
 
         <nav aria-label="Primary" className={menuOpen ? "nav-open" : ""}>
