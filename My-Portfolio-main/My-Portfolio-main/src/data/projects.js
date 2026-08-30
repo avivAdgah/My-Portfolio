@@ -124,6 +124,24 @@ const projects = [
     featured: false,
   },
   {
+    id: "lawyer-landing-page",
+    name: "Lawyer Landing Page",
+    image: "lawyer.jpg",
+    description:
+      "A marketing landing page for an employment law firm, built with Next.js and Tailwind CSS, presenting practice areas, attorney background, client process, and reviews with a consultation call-to-action.",
+    highlights: [
+      "Built with Next.js (App Router)",
+      "Styled with Tailwind CSS",
+      "Sections for practice areas, process & reviews",
+    ],
+    technologies: ["Next.js", "React", "Tailwind CSS"],
+    liveUrl: "https://laywer-landing-page.netlify.app/",
+    githubUrl: "https://github.com/avivAdgah/Laywer---landing-page",
+    category: "Business Website",
+    status: "Completed",
+    featured: false,
+  },
+  {
     id: "recipe-page",
     name: "Recipe Page",
     image: "recipePage.jpg",
