@@ -142,6 +142,24 @@ const projects = [
     featured: false,
   },
   {
+    id: "interior-design-studio",
+    name: "Northline Studio",
+    image: "stuido.jpg",
+    description:
+      "A portfolio site for a fictional architecture and interior design practice, built with Next.js, showcasing projects and studio philosophy with a clean, editorial layout.",
+    highlights: [
+      "Built with Next.js (App Router)",
+      "Editorial, image-driven layout",
+      "Project showcase & studio overview",
+    ],
+    technologies: ["Next.js", "React", "Tailwind CSS"],
+    liveUrl: "https://interior-design-studio-project.netlify.app/",
+    githubUrl: "https://github.com/avivAdgah/Interior-Design-Studio",
+    category: "Business Website",
+    status: "Completed",
+    featured: false,
+  },
+  {
     id: "recipe-page",
     name: "Recipe Page",
     image: "recipePage.jpg",
