@@ -1,10 +1,11 @@
-.projects {
+.selected-work {
   padding-top: var(--section-gap);
   padding-bottom: var(--section-gap);
 }
 
-.other-title {
-  margin-top: 56px;
+.selected-work-intro {
+  max-width: 60ch;
+  margin: 12px 0 0;
 }
 
 .projects-grid {
@@ -15,6 +16,11 @@
 
 .featured-grid {
   grid-template-columns: repeat(2, 1fr);
+}
+
+.more-work-title {
+  margin-top: 56px;
+  font-size: 1.2rem;
 }
 
 .other-grid {

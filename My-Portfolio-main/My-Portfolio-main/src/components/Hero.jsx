@@ -1,26 +1,30 @@
 import "./Hero.css";
 
+const techStack = ["React", "Next.js", "JavaScript", "Tailwind CSS"];
+
 export default function Hero() {
   return (
     <section className="hero container">
-      <p className="hero-kicker">Hi, I'm Aviv from GLORY & CO</p>
       <h1 className="hero-title">
-        Frontend Developer Building <span>Modern, Responsive</span> Web
-        Experiences
+        I Design & Build <span>Modern Websites</span> for Businesses
       </h1>
       <p className="hero-text">
-        I build modern, responsive websites and web applications using
-        React, Next.js, JavaScript, and Tailwind CSS — with a focus on
-        clean design, performance, and user experience.
+        Custom, responsive and high-performance websites designed to help
+        businesses, professionals and growing brands stand out online.
       </p>
       <div className="hero-actions">
-        <a href="#projects" className="btn btn-primary">
-          View Projects
+        <a href="#work" className="btn btn-primary">
+          View My Work
         </a>
         <a href="#contact" className="btn btn-secondary">
-          Contact Me
+          Start a Project
         </a>
       </div>
+      <ul className="hero-stack" aria-label="Technologies I work with">
+        {techStack.map((tech) => (
+          <li key={tech}>{tech}</li>
+        ))}
+      </ul>
     </section>
   );
 }

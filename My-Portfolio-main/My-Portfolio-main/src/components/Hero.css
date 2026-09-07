@@ -1,7 +1,6 @@
 .hero {
   padding-top: clamp(48px, 10vh, 120px);
   padding-bottom: clamp(48px, 10vh, 120px);
-  max-width: 780px;
 }
 
 .hero-kicker {
@@ -31,4 +30,18 @@
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
+}
+
+.hero-stack {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  margin: 40px 0 0;
+  padding: 20px 0 0;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
 }

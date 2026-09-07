@@ -1,9 +1,12 @@
+import { Link } from "react-router-dom";
 import "./ProjectCard.css";
 
 export default function ProjectCard({ project, featured = false }) {
   const {
+    id,
     name,
     image,
+    industryLabel,
     description,
     highlights,
     technologies,
@@ -11,6 +14,7 @@ export default function ProjectCard({ project, featured = false }) {
     githubUrl,
     category,
     status,
+    caseStudy,
   } = project;
 
   return (
@@ -18,7 +22,7 @@ export default function ProjectCard({ project, featured = false }) {
       <div className="project-image-wrap">
         <img
           src={`/assets/images/${image}`}
-          alt={`${name} preview`}
+          alt={`${name} – ${industryLabel || category || "website"} screenshot`}
           className="project-image"
           loading="lazy"
         />
@@ -31,6 +35,7 @@ export default function ProjectCard({ project, featured = false }) {
             <span className="status-badge">{status}</span>
           )}
         </div>
+        {industryLabel && <p className="project-industry">{industryLabel}</p>}
         <p className="project-text">{description}</p>
         {featured && highlights?.length > 0 && (
           <ul className="project-highlights">
@@ -47,15 +52,22 @@ export default function ProjectCard({ project, featured = false }) {
           ))}
         </ul>
         <div className="project-links">
+          {caseStudy && (
+            <Link to={`/work/${id}`} className="btn btn-sm btn-primary">
+              View Case Study
+            </Link>
+          )}
           <a
             href={liveUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-sm btn-primary"
+            className={
+              caseStudy ? "btn btn-sm btn-secondary" : "btn btn-sm btn-primary"
+            }
           >
-            Live Demo
+            {caseStudy ? "Live Website" : "Live Demo"}
           </a>
-          {githubUrl && (
+          {!caseStudy && githubUrl && (
             <a
               href={githubUrl}
               target="_blank"

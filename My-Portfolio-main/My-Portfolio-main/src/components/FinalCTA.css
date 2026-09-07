@@ -1,0 +1,22 @@
+.final-cta {
+  background-color: var(--bg-elevated);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.final-cta-inner {
+  padding-top: var(--section-gap);
+  padding-bottom: var(--section-gap);
+  text-align: center;
+}
+
+.final-cta-title {
+  margin: 0 0 8px;
+  font-size: clamp(1.5rem, 2vw + 1rem, 2.25rem);
+}
+
+.final-cta-text {
+  margin: 0 0 24px;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}

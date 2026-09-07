@@ -1,27 +1,23 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import { ThemeProvider } from "./context/ThemeContext";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Services from "./components/Services";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import ScrollToHash from "./components/ScrollToHash";
+import HomePage from "./pages/HomePage";
+import CaseStudyPage from "./pages/CaseStudyPage";
 
 function App() {
   return (
-    <ThemeProvider>
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Services />
-        <Projects />
-        <Contact />
-      </main>
-      <Footer />
-    </ThemeProvider>
+    <HelmetProvider>
+      <ThemeProvider>
+        <BrowserRouter>
+          <ScrollToHash />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/work/:id" element={<CaseStudyPage />} />
+          </Routes>
+        </BrowserRouter>
+      </ThemeProvider>
+    </HelmetProvider>
   );
 }
 
