@@ -1,18 +1,23 @@
+import { useLanguage } from "../context/useLanguage";
+import translations from "../i18n/translations";
 import "./Footer.css";
 
 const EMAIL = "avivadgha@gmail.com";
 const GITHUB_URL = "https://github.com/avivAdgah";
 
-const links = [
-  { href: "#work", label: "Work" },
-  { href: "#services", label: "Services" },
-  { href: "#about", label: "About" },
-  { href: "#contact", label: "Contact" },
-];
-
 export default function Footer() {
+  const { language } = useLanguage();
+  const t = translations[language].nav;
+
+  const links = [
+    { href: "#work", label: t.work },
+    { href: "#services", label: t.services },
+    { href: "#about", label: t.about },
+    { href: "#contact", label: t.contact },
+  ];
+
   return (
-    <footer className="footer">
+    <footer className="footer" dir="ltr">
       <div className="footer-inner container">
         <span className="footer-brand">Aviv Adgah</span>
 

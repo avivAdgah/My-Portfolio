@@ -72,7 +72,7 @@
 
 .case-study-body ul {
   margin: 0;
-  padding-left: 20px;
+  padding-inline-start: 20px;
   color: var(--text-muted);
   line-height: 1.8;
 }

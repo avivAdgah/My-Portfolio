@@ -1,39 +1,39 @@
 import { useState } from "react";
+import { useLanguage } from "../context/useLanguage";
+import translations from "../i18n/translations";
 import "./Contact.css";
 
 const EMAIL = "avivadgha@gmail.com";
 
-const projectTypes = [
-  "Business Website",
-  "Landing Page",
-  "Portfolio Website",
-  "Custom Development",
-  "Other",
-];
-
 const initialForm = {
   name: "",
   email: "",
-  projectType: projectTypes[0],
+  projectTypeIndex: 0,
   message: "",
 };
 
 export default function Contact() {
+  const { language } = useLanguage();
+  const t = translations[language].contact;
   const [form, setForm] = useState(initialForm);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setForm((prev) => ({ ...prev, [name]: value }));
+    setForm((prev) => ({
+      ...prev,
+      [name]: name === "projectTypeIndex" ? Number(value) : value,
+    }));
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    const subject = `Project Inquiry – ${form.projectType}`;
+    const projectType = t.projectTypes[form.projectTypeIndex];
+    const subject = `${t.labels.projectType} – ${projectType}`;
     const bodyLines = [
-      `Name: ${form.name}`,
-      `Email: ${form.email}`,
-      `Project Type: ${form.projectType}`,
+      `${t.labels.name}: ${form.name}`,
+      `${t.labels.email}: ${form.email}`,
+      `${t.labels.projectType}: ${projectType}`,
       "",
       form.message,
     ];
@@ -47,16 +47,13 @@ export default function Contact() {
 
   return (
     <section id="contact" className="contact container">
-      <h2 className="section-title">Tell Me About Your Project</h2>
-      <p className="section-text contact-intro">
-        Share a few details and I'll get back to you to talk about your
-        project.
-      </p>
+      <h2 className="section-title">{t.title}</h2>
+      <p className="section-text contact-intro">{t.intro}</p>
 
       <form className="contact-form" onSubmit={handleSubmit}>
         <div className="form-row">
           <div className="form-field">
-            <label htmlFor="name">Name</label>
+            <label htmlFor="name">{t.labels.name}</label>
             <input
               id="name"
               name="name"
@@ -67,7 +64,7 @@ export default function Contact() {
             />
           </div>
           <div className="form-field">
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email">{t.labels.email}</label>
             <input
               id="email"
               name="email"
@@ -80,15 +77,15 @@ export default function Contact() {
         </div>
 
         <div className="form-field">
-          <label htmlFor="projectType">Project Type</label>
+          <label htmlFor="projectTypeIndex">{t.labels.projectType}</label>
           <select
-            id="projectType"
-            name="projectType"
-            value={form.projectType}
+            id="projectTypeIndex"
+            name="projectTypeIndex"
+            value={form.projectTypeIndex}
             onChange={handleChange}
           >
-            {projectTypes.map((type) => (
-              <option key={type} value={type}>
+            {t.projectTypes.map((type, index) => (
+              <option key={type} value={index}>
                 {type}
               </option>
             ))}
@@ -96,7 +93,7 @@ export default function Contact() {
         </div>
 
         <div className="form-field">
-          <label htmlFor="message">Message</label>
+          <label htmlFor="message">{t.labels.message}</label>
           <textarea
             id="message"
             name="message"
@@ -108,13 +105,12 @@ export default function Contact() {
         </div>
 
         <button type="submit" className="btn btn-primary contact-submit">
-          Tell Me About Your Project
+          {t.submit}
         </button>
       </form>
 
       <p className="contact-email">
-        Or reach me directly at{" "}
-        <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
+        {t.orReach} <a href={`mailto:${EMAIL}`} dir="ltr">{EMAIL}</a>
       </p>
     </section>
   );

@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom";
+import { useLanguage } from "../context/useLanguage";
+import translations from "../i18n/translations";
 import "./ProjectCard.css";
 
 export default function ProjectCard({ project, featured = false }) {
+  const { language } = useLanguage();
+  const t = translations[language].selectedWork;
+
   const {
     id,
     name,
@@ -44,7 +49,7 @@ export default function ProjectCard({ project, featured = false }) {
             ))}
           </ul>
         )}
-        <ul className="project-tags">
+        <ul className="project-tags" dir="ltr">
           {technologies.map((tech) => (
             <li key={tech} className="tag">
               {tech}
@@ -54,7 +59,7 @@ export default function ProjectCard({ project, featured = false }) {
         <div className="project-links">
           {caseStudy && (
             <Link to={`/work/${id}`} className="btn btn-sm btn-primary">
-              View Case Study
+              {t.viewCaseStudy}
             </Link>
           )}
           <a
@@ -65,7 +70,7 @@ export default function ProjectCard({ project, featured = false }) {
               caseStudy ? "btn btn-sm btn-secondary" : "btn btn-sm btn-primary"
             }
           >
-            {caseStudy ? "Live Website" : "Live Demo"}
+            {caseStudy ? t.liveWebsite : t.liveDemo}
           </a>
           {!caseStudy && githubUrl && (
             <a
@@ -74,7 +79,7 @@ export default function ProjectCard({ project, featured = false }) {
               rel="noopener noreferrer"
               className="btn btn-sm btn-secondary"
             >
-              View Code
+              {t.viewCode}
             </a>
           )}
         </div>

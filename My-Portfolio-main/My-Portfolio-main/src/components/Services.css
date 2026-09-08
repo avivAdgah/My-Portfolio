@@ -52,14 +52,14 @@
 }
 
 .service-includes li {
-  padding-left: 16px;
+  padding-inline-start: 16px;
   position: relative;
 }
 
 .service-includes li::before {
   content: "";
   position: absolute;
-  left: 0;
+  inset-inline-start: 0;
   top: 8px;
   width: 6px;
   height: 6px;

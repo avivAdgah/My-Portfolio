@@ -1,26 +1,28 @@
 import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import projects from "../data/projects";
+import projects, { localizeProject } from "../data/projects";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { useLanguage } from "../context/useLanguage";
+import translations from "../i18n/translations";
 import "./CaseStudyPage.css";
 
 export default function CaseStudyPage() {
   const { id } = useParams();
-  const project = projects.find((item) => item.id === id);
+  const { language } = useLanguage();
+  const t = translations[language].caseStudy;
+  const rawProject = projects.find((item) => item.id === id);
+  const project = rawProject ? localizeProject(rawProject, language) : null;
 
   if (!project || !project.caseStudy) {
     return (
       <>
         <Navbar />
         <main className="container case-study-not-found">
-          <h1>Case study not found</h1>
-          <p className="section-text">
-            The project you're looking for doesn't exist or doesn't have a
-            case study yet.
-          </p>
+          <h1>{t.notFoundTitle}</h1>
+          <p className="section-text">{t.notFoundText}</p>
           <Link to="/#work" className="btn btn-primary">
-            Back to Work
+            {t.backToWorkBtn}
           </Link>
         </main>
         <Footer />
@@ -30,7 +32,10 @@ export default function CaseStudyPage() {
 
   const { name, industryLabel, image, liveUrl, technologies, caseStudy } =
     project;
-  const title = `${name} Case Study | Aviv Adgah`;
+  const title =
+    language === "he"
+      ? `${name} — קייס סטאדי | אביב אדגה`
+      : `${name} Case Study | Aviv Adgah`;
   const description = caseStudy.purpose;
 
   return (
@@ -52,7 +57,7 @@ export default function CaseStudyPage() {
       <Navbar />
       <main className="case-study container">
         <Link to="/#work" className="back-link">
-          ← Back to Work
+          {t.backToWork}
         </Link>
 
         <p className="case-study-industry">{industryLabel}</p>
@@ -69,27 +74,27 @@ export default function CaseStudyPage() {
 
         <div className="case-study-body">
           <section>
-            <h2>Project Overview</h2>
+            <h2>{t.projectOverview}</h2>
             <p>{caseStudy.purpose}</p>
           </section>
 
           <section>
-            <h2>The Challenge</h2>
+            <h2>{t.theChallenge}</h2>
             <p>{caseStudy.challenge}</p>
           </section>
 
           <section>
-            <h2>The Solution</h2>
+            <h2>{t.theSolution}</h2>
             <p>{caseStudy.solution}</p>
           </section>
 
           <section>
-            <h2>Design Approach</h2>
+            <h2>{t.designApproach}</h2>
             <p>{caseStudy.designApproach}</p>
           </section>
 
           <section>
-            <h2>Key Features</h2>
+            <h2>{t.keyFeatures}</h2>
             <ul>
               {caseStudy.keyFeatures.map((feature) => (
                 <li key={feature}>{feature}</li>
@@ -98,13 +103,13 @@ export default function CaseStudyPage() {
           </section>
 
           <section>
-            <h2>Responsive Experience</h2>
+            <h2>{t.responsiveExperience}</h2>
             <p>{caseStudy.responsive}</p>
           </section>
 
           <section>
-            <h2>Technologies</h2>
-            <ul className="case-study-tech">
+            <h2>{t.technologies}</h2>
+            <ul className="case-study-tech" dir="ltr">
               {technologies.map((tech) => (
                 <li key={tech} className="tag">
                   {tech}
@@ -115,7 +120,7 @@ export default function CaseStudyPage() {
 
           {caseStudy.screenshots?.length > 0 && (
             <section>
-              <h2>Screenshots</h2>
+              <h2>{t.screenshots}</h2>
               <div className="case-study-screenshots">
                 {caseStudy.screenshots.map((screenshot) => (
                   <img
@@ -137,10 +142,10 @@ export default function CaseStudyPage() {
             rel="noopener noreferrer"
             className="btn btn-primary"
           >
-            Visit Live Website
+            {t.visitLiveWebsite}
           </a>
           <Link to="/#contact" className="btn btn-secondary">
-            Start a Similar Project
+            {t.startSimilarProject}
           </Link>
         </div>
       </main>

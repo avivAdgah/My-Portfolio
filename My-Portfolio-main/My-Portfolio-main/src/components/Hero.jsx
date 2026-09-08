@@ -1,26 +1,30 @@
+import { useLanguage } from "../context/useLanguage";
+import translations from "../i18n/translations";
 import "./Hero.css";
 
 const techStack = ["React", "Next.js", "JavaScript", "Tailwind CSS"];
 
 export default function Hero() {
+  const { language } = useLanguage();
+  const t = translations[language].hero;
+
   return (
     <section className="hero container">
       <h1 className="hero-title">
-        I Design & Build <span>Modern Websites</span> for Businesses
+        {t.titleBefore}
+        <span>{t.titleHighlight}</span>
+        {t.titleAfter}
       </h1>
-      <p className="hero-text">
-        Custom, responsive and high-performance websites designed to help
-        businesses, professionals and growing brands stand out online.
-      </p>
+      <p className="hero-text">{t.text}</p>
       <div className="hero-actions">
         <a href="#work" className="btn btn-primary">
-          View My Work
+          {t.viewWork}
         </a>
         <a href="#contact" className="btn btn-secondary">
-          Start a Project
+          {t.startProject}
         </a>
       </div>
-      <ul className="hero-stack" aria-label="Technologies I work with">
+      <ul className="hero-stack" aria-label={t.techAriaLabel} dir="ltr">
         {techStack.map((tech) => (
           <li key={tech}>{tech}</li>
         ))}

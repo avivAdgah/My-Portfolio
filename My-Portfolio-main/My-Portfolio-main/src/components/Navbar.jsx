@@ -1,28 +1,33 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle";
+import LanguageToggle from "./LanguageToggle";
+import { useLanguage } from "../context/useLanguage";
+import translations from "../i18n/translations";
 import "./Navbar.css";
-
-const links = [
-  { hash: "#work", label: "Work" },
-  { hash: "#services", label: "Services" },
-  { hash: "#about", label: "About" },
-  { hash: "#contact", label: "Contact" },
-];
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const { pathname } = useLocation();
   const isHome = pathname === "/";
+  const { language } = useLanguage();
+  const t = translations[language].nav;
+
+  const links = [
+    { hash: "#work", label: t.work },
+    { hash: "#services", label: t.services },
+    { hash: "#about", label: t.about },
+    { hash: "#contact", label: t.contact },
+  ];
 
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <header className="navbar">
+    <header className="navbar" dir="ltr">
       <div className="navbar-inner container">
-        <Link to="/" aria-label="Aviv Adgah - Home" className="logo">
+        <a href="/" aria-label="Aviv Adgah - Home" className="logo">
           Aviv Adgah
-        </Link>
+        </a>
 
         <nav aria-label="Primary" className={menuOpen ? "nav-open" : ""}>
           <ul className="nav-links">
@@ -44,11 +49,11 @@ export default function Navbar() {
             <li className="nav-cta-mobile">
               {isHome ? (
                 <a href="#contact" onClick={closeMenu}>
-                  Start a Project
+                  {t.startProject}
                 </a>
               ) : (
                 <Link to="/#contact" onClick={closeMenu}>
-                  Start a Project
+                  {t.startProject}
                 </Link>
               )}
             </li>
@@ -56,14 +61,15 @@ export default function Navbar() {
         </nav>
 
         <div className="navbar-actions">
+          <LanguageToggle />
           <ThemeToggle />
           {isHome ? (
             <a href="#contact" className="btn btn-sm btn-primary navbar-cta">
-              Start a Project
+              {t.startProject}
             </a>
           ) : (
             <Link to="/#contact" className="btn btn-sm btn-primary navbar-cta">
-              Start a Project
+              {t.startProject}
             </Link>
           )}
           <button
