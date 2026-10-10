@@ -418,7 +418,7 @@ const projects = [
     ],
     technologies: ["WordPress", "Elementor", "CSS"],
     liveUrl: "https://coruscating-manatee-e96eb2.netlify.app/",
-    category: "Landing Page",
+    category: "WordPress",
     status: "Completed",
     featured: false,
     he: {
@@ -430,7 +430,7 @@ const projects = [
         "ניתן לעריכה מלאה על ידי הלקוח, בלי קוד",
         "גלריה עם כיתובים ולייטבוקס",
       ],
-      category: "עמוד נחיתה",
+      category: "וורדפרס",
     },
   },
   {
