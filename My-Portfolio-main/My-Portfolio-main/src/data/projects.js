@@ -406,6 +406,34 @@ const projects = [
     },
   },
   {
+    id: "george-dylan-tour-guide",
+    name: "George Dylan – Tour Guide",
+    image: "georgeDylan.jpg",
+    description:
+      "A one-page landing site for a Tel Aviv tour guide, built with WordPress and Elementor so the client can edit every text, photo and button on their own, with an illustrated hero, a captioned photo gallery and WhatsApp contact.",
+    highlights: [
+      "Built with WordPress & Elementor",
+      "Fully editable by the client, no code",
+      "Captioned gallery with lightbox",
+    ],
+    technologies: ["WordPress", "Elementor", "CSS"],
+    liveUrl: "https://coruscating-manatee-e96eb2.netlify.app/",
+    category: "Landing Page",
+    status: "Completed",
+    featured: false,
+    he: {
+      name: "ג׳ורג׳ דילן – מורה דרך",
+      description:
+        "אתר נחיתה בעמוד אחד למורה דרך מתל אביב, שנבנה עם WordPress ו-Elementor כך שהלקוח יכול לערוך בעצמו כל טקסט, תמונה וכפתור, עם הירו מאויר, גלריית תמונות עם כיתובים ויצירת קשר בוואטסאפ.",
+      highlights: [
+        "נבנה עם WordPress ו-Elementor",
+        "ניתן לעריכה מלאה על ידי הלקוח, בלי קוד",
+        "גלריה עם כיתובים ולייטבוקס",
+      ],
+      category: "עמוד נחיתה",
+    },
+  },
+  {
     id: "recipe-page",
     name: "Recipe Page",
     image: "recipePage.jpg",
