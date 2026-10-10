@@ -29,7 +29,6 @@ const translations = {
       viewCaseStudy: "View Case Study",
       liveWebsite: "Live Website",
       liveDemo: "Live Demo",
-      viewCode: "View Code",
     },
     services: {
       title: "Services",
@@ -195,7 +194,6 @@ const translations = {
       viewCaseStudy: "לצפייה בקייס סטאדי",
       liveWebsite: "לאתר החי",
       liveDemo: "הדגמה חיה",
-      viewCode: "צפייה בקוד",
     },
     services: {
       title: "שירותים",

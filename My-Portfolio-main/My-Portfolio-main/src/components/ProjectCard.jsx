@@ -16,7 +16,6 @@ export default function ProjectCard({ project, featured = false }) {
     highlights,
     technologies,
     liveUrl,
-    githubUrl,
     category,
     status,
     caseStudy,
@@ -72,16 +71,6 @@ export default function ProjectCard({ project, featured = false }) {
           >
             {caseStudy ? t.liveWebsite : t.liveDemo}
           </a>
-          {!caseStudy && githubUrl && (
-            <a
-              href={githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-sm btn-secondary"
-            >
-              {t.viewCode}
-            </a>
-          )}
         </div>
       </div>
     </article>
