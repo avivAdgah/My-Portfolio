@@ -447,7 +447,7 @@ const projects = [
     ],
     technologies: ["WordPress", "WooCommerce", "Elementor", "CSS"],
     liveUrl: "https://stirring-malasada-1de90d.netlify.app/",
-    category: "WordPress",
+    category: "WordPress · WooCommerce",
     status: "Completed",
     featured: false,
     he: {
@@ -459,7 +459,7 @@ const projects = [
         "קטלוג מוצרים עם קטגוריות ועמודי מוצר",
         "הלקוח מנהל מוצרים והזמנות בעצמו, בלי קוד",
       ],
-      category: "וורדפרס",
+      category: "וורדפרס · WooCommerce",
     },
   },
   {
