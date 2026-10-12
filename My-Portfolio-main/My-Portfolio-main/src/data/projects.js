@@ -446,7 +446,7 @@ const projects = [
       "Client manages products & orders with no code",
     ],
     technologies: ["WordPress", "WooCommerce", "Elementor", "CSS"],
-    liveUrl: "https://stirring-malasada-1de90d.netlify.app/",
+    liveUrl: "https://arava-botanics.netlify.app/",
     category: "WordPress · WooCommerce",
     status: "Completed",
     featured: false,
