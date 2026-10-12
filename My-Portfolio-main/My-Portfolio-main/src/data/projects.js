@@ -417,7 +417,7 @@ const projects = [
       "Captioned gallery with lightbox",
     ],
     technologies: ["WordPress", "Elementor", "CSS"],
-    liveUrl: "https://coruscating-manatee-e96eb2.netlify.app/",
+    liveUrl: "https://george-dylan.netlify.app/",
     category: "WordPress",
     status: "Completed",
     featured: false,
