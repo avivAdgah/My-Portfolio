@@ -434,6 +434,35 @@ const projects = [
     },
   },
   {
+    id: "arava-botanics",
+    name: "Arava Botanics",
+    image: "aravaBotanics.jpg",
+    industryLabel: "Skincare E-Commerce Store",
+    description:
+      "An online store for a natural skincare brand built on Dead Sea minerals, olive oil and desert plants, built with WordPress, WooCommerce and Elementor, with product categories, product pages, cart and checkout. The live demo is a static showcase of the store.",
+    highlights: [
+      "Built with WordPress, WooCommerce & Elementor",
+      "Product catalog with categories & product pages",
+      "Client manages products & orders with no code",
+    ],
+    technologies: ["WordPress", "WooCommerce", "Elementor", "CSS"],
+    liveUrl: "https://stirring-malasada-1de90d.netlify.app/",
+    category: "WordPress",
+    status: "Completed",
+    featured: false,
+    he: {
+      industryLabel: "חנות אונליין למוצרי טיפוח",
+      description:
+        "חנות אונליין למותג טיפוח טבעי המבוסס על מינרלים מים המלח, שמן זית וצמחי מדבר, שנבנתה עם WordPress, WooCommerce ו-Elementor, עם קטגוריות מוצרים, עמודי מוצר, עגלה ותשלום. הדמו החי הוא תצוגה סטטית של החנות.",
+      highlights: [
+        "נבנה עם WordPress, WooCommerce ו-Elementor",
+        "קטלוג מוצרים עם קטגוריות ועמודי מוצר",
+        "הלקוח מנהל מוצרים והזמנות בעצמו, בלי קוד",
+      ],
+      category: "וורדפרס",
+    },
+  },
+  {
     id: "recipe-page",
     name: "Recipe Page",
     image: "recipePage.jpg",
