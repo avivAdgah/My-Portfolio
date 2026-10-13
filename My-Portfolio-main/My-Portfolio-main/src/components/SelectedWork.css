@@ -28,6 +28,40 @@
   gap: 20px;
 }
 
+/* Labelled line separating the WordPress projects from the coded ones */
+.work-divider {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 64px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.work-divider::before,
+.work-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.work-divider span {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.work-divider span::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
 @media (max-width: 1024px) {
   .other-grid {
     grid-template-columns: repeat(2, 1fr);

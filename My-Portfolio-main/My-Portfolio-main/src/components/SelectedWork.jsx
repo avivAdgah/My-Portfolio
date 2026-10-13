@@ -12,8 +12,14 @@ export default function SelectedWork() {
     .map((id) => projects.find((project) => project.id === id))
     .filter(Boolean)
     .map((project) => localizeProject(project, language));
-  const more = projects
-    .filter((project) => !selectedWorkIds.includes(project.id))
+  const rest = projects.filter((project) => !selectedWorkIds.includes(project.id));
+  // Split on the English category, before localizing ("WordPress" / "WordPress · WooCommerce").
+  const isWordPress = (project) => project.category?.startsWith("WordPress");
+  const more = rest
+    .filter((project) => !isWordPress(project))
+    .map((project) => localizeProject(project, language));
+  const wordpress = rest
+    .filter(isWordPress)
     .map((project) => localizeProject(project, language));
 
   return (
@@ -32,6 +38,19 @@ export default function SelectedWork() {
           <ProjectCard key={project.id} project={project} />
         ))}
       </div>
+
+      {wordpress.length > 0 && (
+        <>
+          <div className="work-divider" role="separator">
+            <span>{t.wordpressTitle}</span>
+          </div>
+          <div className="projects-grid other-grid">
+            {wordpress.map((project) => (
+              <ProjectCard key={project.id} project={project} />
+            ))}
+          </div>
+        </>
+      )}
     </section>
   );
 }

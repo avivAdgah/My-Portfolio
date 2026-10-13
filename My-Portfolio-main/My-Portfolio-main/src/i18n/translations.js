@@ -26,6 +26,7 @@ const translations = {
       intro:
         "A few recent projects — each one built to solve a real business problem, not just to show off code.",
       moreProjectsTitle: "More Projects",
+      wordpressTitle: "WordPress Projects",
       viewCaseStudy: "View Case Study",
       liveWebsite: "Live Website",
       liveDemo: "Live Demo",
@@ -191,6 +192,7 @@ const translations = {
       intro:
         "כמה פרויקטים אחרונים — כל אחד נבנה כדי לפתור בעיה עסקית אמיתית, לא רק כדי להציג קוד.",
       moreProjectsTitle: "עוד פרויקטים",
+      wordpressTitle: "פרויקטי וורדפרס",
       viewCaseStudy: "לצפייה בקייס סטאדי",
       liveWebsite: "לאתר החי",
       liveDemo: "הדגמה חיה",
