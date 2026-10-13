@@ -463,6 +463,65 @@ const projects = [
     },
   },
   {
+    id: "vintage-store",
+    name: "Vintage STORE",
+    image: "vintageStore.jpg",
+    industryLabel: "Second-Hand Vintage Store",
+    description:
+      "An online store for one-of-a-kind vintage home and decor pieces, built with WordPress, WooCommerce and Elementor. Every item has a single unit in stock, sold pieces get a SOLD stamp, and shoppers can browse by era and condition. The live demo is a static showcase of the store.",
+    highlights: [
+      "Built with WordPress, WooCommerce & Elementor",
+      "One-of-a-kind stock with SOLD states",
+      "Browse by era & condition",
+    ],
+    technologies: ["WordPress", "WooCommerce", "Elementor", "CSS"],
+    liveUrl: "https://vintage-thestore.netlify.app/",
+    category: "WordPress · WooCommerce",
+    status: "Completed",
+    featured: false,
+    he: {
+      industryLabel: "חנות וינטג׳ יד שנייה",
+      description:
+        "חנות אונליין לפריטי בית ועיצוב וינטג׳ ייחודיים, שנבנתה עם WordPress, WooCommerce ו-Elementor. לכל פריט יש יחידה אחת במלאי, פריטים שנמכרו מקבלים חותמת SOLD, ואפשר לסנן לפי עשור ולפי מצב הפריט. הדמו החי הוא תצוגה סטטית של החנות.",
+      highlights: [
+        "נבנה עם WordPress, WooCommerce ו-Elementor",
+        "פריטים ייחודיים במלאי יחיד, עם סימון SOLD",
+        "סינון לפי עשור ולפי מצב",
+      ],
+      category: "וורדפרס · WooCommerce",
+    },
+  },
+  {
+    id: "momentum-consulting",
+    name: "Momentum – Business Consultant",
+    image: "momentum.jpg",
+    industryLabel: "Business Consultant Brand Site",
+    description:
+      "A colorful one-page brand site for a business consultant, built with WordPress and Elementor. Motivational quotes run through the whole page, and visitors can book a free strategy call through a built-in calendar: pick a day, pick a time, add details and get a confirmation.",
+    highlights: [
+      "Built with WordPress & Elementor",
+      "Built-in booking calendar for a free call",
+      "Motivational quotes throughout the page",
+    ],
+    technologies: ["WordPress", "Elementor", "JavaScript", "CSS"],
+    liveUrl: "https://momentum-counselor.netlify.app/",
+    category: "WordPress",
+    status: "Completed",
+    featured: false,
+    he: {
+      name: "Momentum – יועצת עסקית",
+      industryLabel: "אתר תדמית ליועצת עסקית",
+      description:
+        "אתר תדמית צבעוני בעמוד אחד ליועצת עסקית, שנבנה עם WordPress ו-Elementor. משפטי מוטיבציה מלווים את כל הדף, והמבקרים יכולים לקבוע שיחת ייעוץ חינמית ביומן מובנה: בוחרים יום ושעה, ממלאים פרטים ומקבלים אישור.",
+      highlights: [
+        "נבנה עם WordPress ו-Elementor",
+        "יומן מובנה לקביעת שיחת ייעוץ חינמית",
+        "משפטי מוטיבציה לאורך כל הדף",
+      ],
+      category: "וורדפרס",
+    },
+  },
+  {
     id: "recipe-page",
     name: "Recipe Page",
     image: "recipePage.jpg",
