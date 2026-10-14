@@ -44,6 +44,18 @@ body {
   transition: background-color var(--transition), color var(--transition);
 }
 
+/* Hebrew uses Heebo, a modern Hebrew sans-serif; English keeps the system font. */
+html[lang="he"] body {
+  font-family: "Heebo", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+}
+
+html[lang="he"] button,
+html[lang="he"] input,
+html[lang="he"] textarea,
+html[lang="he"] select {
+  font-family: inherit;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
