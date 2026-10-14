@@ -197,6 +197,74 @@ const projects = [
     },
   },
   {
+    id: "nordwalk-3d-store",
+    name: "NORDWALK – 3D Furniture Showroom",
+    image: "nordwalk.jpg",
+    industryLabel: "Furniture E-Commerce in 3D",
+    description:
+      "An online furniture store you shop on foot: visitors walk a 3D showroom like a real store, step up to any product, recolour it live and add it to the cart, all in the browser.",
+    highlights: [
+      "Walk a 3D showroom with scroll, keys or touch",
+      "Live colour variants on the 3D models",
+      "Cart, checkout and shareable product links",
+    ],
+    technologies: ["React", "Vite", "Three.js", "React Three Fiber", "Zustand"],
+    liveUrl: "https://nordwalk-3d-store.netlify.app/",
+    githubUrl: "https://github.com/avivAdgah/nordwalk-3d-store",
+    category: "E-commerce",
+    status: "Completed",
+    featured: true,
+    caseStudy: {
+      purpose:
+        "Built to show how an online store can feel like a visit to the shop: customers walk through furnished rooms and pick products from the room they see, instead of scrolling a grid of thumbnails.",
+      challenge:
+        "3D product viewers are usually a single item on a turntable, and free-roaming 3D scenes confuse shoppers who just want to browse. The store needed to feel like walking a real showroom while staying as easy to use as a normal shop on any device.",
+      solution:
+        "The showroom is a one-way route, like a furniture store: scrolling, the arrow keys or a swipe walk you along it, and dragging looks around. Clicking a product or its price tag walks you up to it and opens a panel where colour choices recolour the 3D model live. The cart and checkout sit on top of the scene, and every department and product has its own shareable link.",
+      designApproach:
+        "A calm Scandinavian palette of oak, linen and sage, yellow floor arrows and hanging department signs borrowed from real stores, and a small map so visitors always know where they are.",
+      keyFeatures: [
+        "Walkable 3D showroom with five departments and a minimap",
+        "Product close-ups with live colour variants on the 3D model",
+        "Cart, quantity controls and a checkout flow",
+        "Shareable links that open a department or a product directly",
+      ],
+      responsive:
+        "On phones a vertical swipe walks and a sideways swipe looks around, the product panel becomes a bottom sheet, and the camera steps further back so the product stays in view.",
+      screenshots: ["nordwalk.jpg", "nordwalkProduct.jpg"],
+    },
+    he: {
+      name: "NORDWALK – אולם תצוגה לרהיטים בתלת-ממד",
+      industryLabel: "חנות רהיטים אונליין בתלת-ממד",
+      description:
+        "חנות רהיטים אונליין שקונים בה ברגל: המבקרים מטיילים באולם תצוגה תלת-ממדי כמו בחנות אמיתית, ניגשים לכל מוצר, משנים לו צבע בזמן אמת ומוסיפים לעגלה, הכל בדפדפן.",
+      highlights: [
+        "הליכה באולם תצוגה תלת-ממדי בגלילה, במקשים או במגע",
+        "החלפת צבעים חיה על המודלים בתלת-ממד",
+        "עגלה, תשלום וקישורים לשיתוף מוצרים",
+      ],
+      category: "מסחר אלקטרוני",
+      caseStudy: {
+        purpose:
+          "נבנה כדי להראות איך חנות אונליין יכולה להרגיש כמו ביקור בחנות: הלקוחות מטיילים בין חדרים מעוצבים ובוחרים מוצרים מתוך החדר שהם רואים, במקום לגלול רשת של תמונות ממוזערות.",
+        challenge:
+          "תצוגות מוצר בתלת-ממד הן בדרך כלל פריט אחד שמסתובב על מעמד, וסצנות תלת-ממד חופשיות מבלבלות קונים שרק רוצים לעיין. החנות הייתה צריכה להרגיש כמו הליכה באולם תצוגה אמיתי ולהישאר פשוטה כמו חנות רגילה בכל מכשיר.",
+        solution:
+          "אולם התצוגה הוא מסלול חד-כיווני, כמו בחנות רהיטים: גלילה, מקשי החיצים או החלקה מקדמים אותך לאורכו, וגרירה מסובבת את המבט. לחיצה על מוצר או על תג המחיר שלו מקרבת אותך אליו ופותחת פאנל שבו בחירת צבע צובעת את המודל בזמן אמת. העגלה והתשלום יושבים מעל הסצנה, ולכל מחלקה ומוצר יש קישור משלו לשיתוף.",
+        designApproach:
+          "פלטה סקנדינבית רגועה של אלון, פשתן ומרווה, חיצים צהובים על הרצפה ושלטי מחלקות תלויים בהשראת חנויות אמיתיות, ומפה קטנה כדי שהמבקרים תמיד יידעו איפה הם נמצאים.",
+        keyFeatures: [
+          "אולם תצוגה תלת-ממדי עם חמש מחלקות ומפה",
+          "תצוגת מוצר מקרוב עם החלפת צבעים חיה על המודל",
+          "עגלה, שליטה בכמויות ותהליך תשלום",
+          "קישורים לשיתוף שפותחים ישירות מחלקה או מוצר",
+        ],
+        responsive:
+          "בטלפון החלקה אנכית מקדמת והחלקה הצידה מסובבת את המבט, פאנל המוצר הופך למגירה תחתונה, והמצלמה נסוגה מעט כדי שהמוצר יישאר בתמונה.",
+      },
+    },
+  },
+  {
     id: "sunyi-bali-resort",
     name: "SUNYI – Bali Jungle Retreat",
     image: "sunyiResort.jpg",
@@ -613,10 +681,10 @@ const projects = [
 ];
 
 export const selectedWorkIds = [
+  "nordwalk-3d-store",
+  "sunyi-bali-resort",
   "interior-design-studio",
-  "photo-gallery",
-  "fitcenter",
-  "shoply",
+  "arava-botanics",
 ];
 
 export function localizeProject(project, language) {
