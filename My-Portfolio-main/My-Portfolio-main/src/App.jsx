@@ -3,6 +3,7 @@ import { HelmetProvider } from "react-helmet-async";
 import { ThemeProvider } from "./context/ThemeContext";
 import { LanguageProvider } from "./context/LanguageContext";
 import ScrollToHash from "./components/ScrollToHash";
+import WhatsAppButton from "./components/WhatsAppButton";
 import HomePage from "./pages/HomePage";
 import CaseStudyPage from "./pages/CaseStudyPage";
 
@@ -17,6 +18,7 @@ function App() {
               <Route path="/" element={<HomePage />} />
               <Route path="/work/:id" element={<CaseStudyPage />} />
             </Routes>
+            <WhatsAppButton />
           </BrowserRouter>
         </ThemeProvider>
       </LanguageProvider>

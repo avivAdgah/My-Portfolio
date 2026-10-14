@@ -1,5 +1,9 @@
 const translations = {
   en: {
+    whatsapp: {
+      label: "Chat on WhatsApp",
+      message: "Hi Aviv, I saw your portfolio and would like to talk about a website.",
+    },
     homeMeta: {
       title: "Aviv Adgah | Web Designer & Developer",
       description:
@@ -166,6 +170,10 @@ const translations = {
     },
   },
   he: {
+    whatsapp: {
+      label: "שלחו הודעה בוואטסאפ",
+      message: "היי אביב, ראיתי את הפורטפוליו שלך ואשמח לדבר על אתר.",
+    },
     homeMeta: {
       title: "אביב אדגה | מעצב ומפתח אתרים",
       description:
