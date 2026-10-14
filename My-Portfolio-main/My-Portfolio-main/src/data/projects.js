@@ -197,6 +197,74 @@ const projects = [
     },
   },
   {
+    id: "sunyi-bali-resort",
+    name: "SUNYI – Bali Jungle Retreat",
+    image: "sunyiResort.jpg",
+    industryLabel: "Boutique Resort & Booking Experience",
+    description:
+      "A booking site for a fictional Bali jungle resort where visitors walk the grounds in real photographs and step inside the villas in 3D. Each room photo is raised into depth with an AI depth map, so you can look around and walk from the bedroom to the shower to the pool, then book.",
+    highlights: [
+      "Walk the resort in real photos",
+      "Villa rooms in 3D from AI depth maps",
+      "Booking.com-style villa list & booking flow",
+    ],
+    technologies: ["React", "Vite", "Three.js", "React Three Fiber", "Zustand"],
+    liveUrl: "https://sunyi-bali-resort.netlify.app/",
+    githubUrl: "https://github.com/avivAdgah/sunyi-bali-resort",
+    category: "Hospitality",
+    status: "Completed",
+    featured: true,
+    caseStudy: {
+      purpose:
+        "Built to show how a hotel site can sell the feeling of a place, not just list rooms: guests walk through the resort and into a villa before they book it.",
+      challenge:
+        "Real photos look real but are flat, and 3D scenes move but look artificial. The goal was a tour that felt like walking through actual rooms while staying photographic, with no 360° cameras or 3D modelling.",
+      solution:
+        "The resort is a path of full-screen photos, one per facility, joined by a walking transition. Inside a villa every room photo gets a depth map from an AI model (Depth Anything V2) and is rendered as a 3D surface in WebGL, so moving the camera gives real parallax: drag to look around, walk in, and keep walking through the doorway into the next room.",
+      designApproach:
+        "Photography leads, and the interface stays quiet: a serif-and-sand palette inspired by Balinese materials, a slim path bar for orientation, and a familiar Booking.com-style villa list with ratings, perks and nightly prices.",
+      keyFeatures: [
+        "Resort walk through eight facilities in real photos, with a walk-in transition between places",
+        "Villa rooms in 3D from AI depth maps: look around, walk in, go through doorways",
+        "Villa list with ratings, filters, sorting and nightly prices",
+        "Booking form with dates, guests, extras and a live price breakdown",
+      ],
+      responsive:
+        "The villa list docks beside the view on desktop and slides in as a drawer on phones, and the room view works with touch: drag to look around, hold to walk.",
+      screenshots: ["sunyiResort.jpg", "sunyiRoom.jpg"],
+    },
+    he: {
+      name: "SUNYI – ריזורט בג׳ונגל של באלי",
+      industryLabel: "ריזורט בוטיק וחוויית הזמנה",
+      description:
+        "אתר הזמנות לריזורט בדיוני בג׳ונגל של באלי, שבו המבקרים מטיילים בשטח בתמונות אמיתיות ונכנסים לווילות בתלת-ממד. כל תמונת חדר הופכת לתלת-ממד בעזרת מפת עומק שנוצרה ב-AI, כך שאפשר להסתכל מסביב וללכת מחדר השינה למקלחת ולבריכה, ואז להזמין.",
+      highlights: [
+        "טיול בריזורט בתמונות אמיתיות",
+        "חדרי הווילות בתלת-ממד ממפות עומק של AI",
+        "רשימת וילות בסגנון Booking ותהליך הזמנה",
+      ],
+      category: "אירוח",
+      caseStudy: {
+        purpose:
+          "נבנה כדי להראות איך אתר של מלון יכול למכור את התחושה של המקום ולא רק לפרט חדרים: האורחים מטיילים בריזורט ונכנסים לווילה לפני שהם מזמינים אותה.",
+        challenge:
+          "תמונות אמיתיות נראות אמיתיות אבל הן שטוחות, וסצנות תלת-ממד זזות אבל נראות מלאכותיות. המטרה הייתה סיור שמרגיש כמו הליכה בחדרים אמיתיים ונשאר צילומי, בלי מצלמות 360° ובלי מידול תלת-ממד.",
+        solution:
+          "הריזורט הוא שביל של תמונות במסך מלא, תמונה לכל מתקן, עם מעבר של הליכה ביניהן. בתוך הווילה כל תמונת חדר מקבלת מפת עומק ממודל AI (Depth Anything V2) ומוצגת כמשטח תלת-ממדי ב-WebGL, כך שתזוזת המצלמה יוצרת עומק אמיתי: גוררים כדי להסתכל מסביב, נכנסים פנימה, וממשיכים ללכת דרך הפתח לחדר הבא.",
+        designApproach:
+          "הצילום מוביל והממשק נשאר שקט: גופן סריף וגווני חול בהשראת חומרים באליניים, פס שביל דק להתמצאות, ורשימת וילות מוכרת בסגנון Booking עם דירוגים, הטבות ומחיר ללילה.",
+        keyFeatures: [
+          "טיול בשמונה מתקני הריזורט בתמונות אמיתיות, עם מעבר של הליכה בין המקומות",
+          "חדרי הווילות בתלת-ממד ממפות עומק של AI: מסתכלים מסביב, נכנסים ועוברים בין החדרים",
+          "רשימת וילות עם דירוגים, סינון, מיון ומחיר ללילה",
+          "טופס הזמנה עם תאריכים, אורחים, תוספות ופירוט מחיר חי",
+        ],
+        responsive:
+          "רשימת הווילות מוצמדת לצד התצוגה בדסקטופ ונפתחת כמגירה בטלפון, ותצוגת החדר עובדת במגע: גוררים כדי להסתכל מסביב ומחזיקים כדי ללכת.",
+      },
+    },
+  },
+  {
     id: "weather-app",
     name: "Weather App",
     image: "weatherApp.jpg",
