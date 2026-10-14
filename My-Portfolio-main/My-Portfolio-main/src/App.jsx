@@ -4,6 +4,7 @@ import { ThemeProvider } from "./context/ThemeContext";
 import { LanguageProvider } from "./context/LanguageContext";
 import ScrollToHash from "./components/ScrollToHash";
 import WhatsAppButton from "./components/WhatsAppButton";
+import ProjectBot from "./components/ProjectBot";
 import HomePage from "./pages/HomePage";
 import CaseStudyPage from "./pages/CaseStudyPage";
 
@@ -19,6 +20,7 @@ function App() {
               <Route path="/work/:id" element={<CaseStudyPage />} />
             </Routes>
             <WhatsAppButton />
+            <ProjectBot />
           </BrowserRouter>
         </ThemeProvider>
       </LanguageProvider>
