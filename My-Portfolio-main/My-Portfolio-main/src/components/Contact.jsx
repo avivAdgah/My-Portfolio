@@ -8,6 +8,10 @@ const EMAIL = "avivadgha@gmail.com";
 const PHONE = `+${WHATSAPP_NUMBER}`;
 const PHONE_DISPLAY = "+972 52-642-8809";
 
+// Submissions go to Netlify Forms. The matching static form in index.html
+// lets Netlify detect the "contact" form at deploy time.
+const FORM_NAME = "contact";
+
 const initialForm = {
   name: "",
   email: "",
@@ -19,6 +23,7 @@ export default function Contact() {
   const { language } = useLanguage();
   const t = translations[language].contact;
   const [form, setForm] = useState(initialForm);
+  const [status, setStatus] = useState("idle"); // idle | sending | success | error
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -28,24 +33,35 @@ export default function Contact() {
     }));
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
+    setStatus("sending");
 
-    const projectType = t.projectTypes[form.projectTypeIndex];
-    const subject = `${t.labels.projectType} – ${projectType}`;
-    const bodyLines = [
-      `${t.labels.name}: ${form.name}`,
-      `${t.labels.email}: ${form.email}`,
-      `${t.labels.projectType}: ${projectType}`,
-      "",
-      form.message,
-    ];
+    // Always submit the English project type so the inbox reads consistently.
+    const projectType =
+      translations.en.contact.projectTypes[form.projectTypeIndex];
+    const body = new URLSearchParams({
+      "form-name": FORM_NAME,
+      name: form.name,
+      email: form.email,
+      projectType,
+      message: form.message,
+      language,
+      "bot-field": event.target.elements["bot-field"].value,
+    });
 
-    const mailtoUrl = `mailto:${EMAIL}?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(bodyLines.join("\n"))}`;
-
-    window.location.href = mailtoUrl;
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: body.toString(),
+      });
+      if (!response.ok) throw new Error(`Status ${response.status}`);
+      setStatus("success");
+      setForm(initialForm);
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
@@ -53,7 +69,14 @@ export default function Contact() {
       <h2 className="section-title">{t.title}</h2>
       <p className="section-text contact-intro">{t.intro}</p>
 
-      <form className="contact-form" onSubmit={handleSubmit}>
+      <form className="contact-form" name={FORM_NAME} onSubmit={handleSubmit}>
+        <p className="visually-hidden" aria-hidden="true">
+          <label>
+            Leave this empty:{" "}
+            <input name="bot-field" tabIndex={-1} autoComplete="off" />
+          </label>
+        </p>
+
         <div className="form-row">
           <div className="form-field">
             <label htmlFor="name">{t.labels.name}</label>
@@ -107,9 +130,22 @@ export default function Contact() {
           />
         </div>
 
-        <button type="submit" className="btn btn-primary contact-submit">
-          {t.submit}
+        <button
+          type="submit"
+          className="btn btn-primary contact-submit"
+          disabled={status === "sending"}
+        >
+          {status === "sending" ? t.sending : t.submit}
         </button>
+
+        <p className="form-status" role="status" aria-live="polite">
+          {status === "success" && (
+            <span className="form-status-success">{t.success}</span>
+          )}
+          {status === "error" && (
+            <span className="form-status-error">{t.error}</span>
+          )}
+        </p>
       </form>
 
       <div className="contact-direct">

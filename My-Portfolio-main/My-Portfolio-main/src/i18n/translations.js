@@ -154,6 +154,9 @@ const translations = {
       whatsappMessage: "Hi Aviv, I saw your portfolio and would like to talk about a website.",
       callLabel: "Call me",
       emailLabel: "Email",
+      sending: "Sending…",
+      success: "Thanks! Your message was sent — I'll get back to you soon.",
+      error: "Something went wrong. Please try again or email me directly.",
     },
     caseStudy: {
       backToWork: "← Back to Work",
@@ -328,6 +331,9 @@ const translations = {
       whatsappMessage: "היי אביב, ראיתי את הפורטפוליו שלך ואשמח לדבר על אתר.",
       callLabel: "התקשרו אליי",
       emailLabel: "אימייל",
+      sending: "שולח…",
+      success: "תודה! ההודעה נשלחה — אחזור אליך בהקדם.",
+      error: "משהו השתבש. נסה שוב או שלח לי מייל ישירות.",
     },
     caseStudy: {
       backToWork: "→ חזרה לעבודות",
