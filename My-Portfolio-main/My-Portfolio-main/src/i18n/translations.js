@@ -83,6 +83,39 @@ const translations = {
             "Forms & dashboards",
           ],
         },
+        {
+          title: "Website Bug Fixing",
+          description:
+            "Something broken on your site? I find and fix the problem — layout issues, broken forms, errors and slow pages — on custom code and WordPress alike.",
+          includes: [
+            "Layout & mobile display fixes",
+            "Broken forms & links",
+            "JavaScript & plugin errors",
+            "Speed & performance issues",
+          ],
+        },
+        {
+          title: "Wix to WordPress Migration",
+          description:
+            "Moving from Wix to WordPress for more control, flexibility and ownership — with your content, design and SEO carried over safely.",
+          includes: [
+            "Full content & page migration",
+            "Design rebuilt in WordPress",
+            "SEO & URL redirects preserved",
+            "Domain & hosting setup",
+          ],
+        },
+        {
+          title: "AI Agents for Your Website",
+          description:
+            "Smart AI assistants added to your site that answer visitors, qualify leads and save you time — trained on your business information.",
+          includes: [
+            "AI chat assistant on your site",
+            "Trained on your business content",
+            "Lead capture & qualification",
+            "Workflow automation",
+          ],
+        },
       ],
     },
     howIWork: {
@@ -146,6 +179,9 @@ const translations = {
         "E-Commerce",
         "SaaS",
         "Custom Development",
+        "Bug Fixing",
+        "Wix to WordPress Migration",
+        "AI Agent",
         "Other",
       ],
       submit: "Tell Me About Your Project",
@@ -260,6 +296,39 @@ const translations = {
             "טפסים ולוחות בקרה",
           ],
         },
+        {
+          title: "תיקון באגים באתרים",
+          description:
+            "משהו לא עובד באתר? אני מאתר ומתקן את הבעיה — תקלות תצוגה, טפסים שלא שולחים, שגיאות ועמודים איטיים — גם בקוד מותאם וגם בוורדפרס.",
+          includes: [
+            "תיקון תצוגה ומובייל",
+            "טפסים וקישורים שבורים",
+            "שגיאות JavaScript ותוספים",
+            "בעיות מהירות וביצועים",
+          ],
+        },
+        {
+          title: "המרת אתרים מ-Wix לוורדפרס",
+          description:
+            "מעבר מ-Wix לוורדפרס לשליטה, גמישות ובעלות מלאה על האתר — עם העברה בטוחה של התוכן, העיצוב וה-SEO.",
+          includes: [
+            "העברת כל התוכן והעמודים",
+            "בניית העיצוב מחדש בוורדפרס",
+            "שמירה על SEO והפניות כתובות",
+            "הגדרת דומיין ואחסון",
+          ],
+        },
+        {
+          title: "הוספת סוכני AI לאתר",
+          description:
+            "עוזרי AI חכמים שמשולבים באתר, עונים למבקרים, מסננים לידים וחוסכים לך זמן — מאומנים על המידע של העסק שלך.",
+          includes: [
+            "צ'אט AI באתר",
+            "מאומן על התוכן של העסק",
+            "איסוף וסינון לידים",
+            "אוטומציה של תהליכים",
+          ],
+        },
       ],
     },
     howIWork: {
@@ -323,6 +392,9 @@ const translations = {
         "מסחר אלקטרוני",
         "SaaS",
         "פיתוח מותאם אישית",
+        "תיקון באגים",
+        "המרה מ-Wix לוורדפרס",
+        "סוכן AI",
         "אחר",
       ],
       submit: "ספר לי על הפרויקט שלך",

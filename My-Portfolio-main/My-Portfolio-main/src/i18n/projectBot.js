@@ -18,6 +18,9 @@ const steps = {
         { id: "store", label: "Online store" },
         { id: "portfolio", label: "Portfolio / gallery" },
         { id: "webapp", label: "Web app / system" },
+        { id: "bugfix", label: "Fix bugs on my site" },
+        { id: "wix", label: "Move from Wix to WordPress" },
+        { id: "ai", label: "Add an AI agent" },
         { id: "unsure", label: "Not sure yet" },
       ],
     },
@@ -106,6 +109,9 @@ const steps = {
         { id: "store", label: "חנות אונליין" },
         { id: "portfolio", label: "תיק עבודות / גלריה" },
         { id: "webapp", label: "אפליקציית ווב / מערכת" },
+        { id: "bugfix", label: "תיקון באגים באתר" },
+        { id: "wix", label: "מעבר מ-Wix לוורדפרס" },
+        { id: "ai", label: "הוספת סוכן AI" },
         { id: "unsure", label: "עוד לא בטוח" },
       ],
     },
@@ -246,10 +252,13 @@ const ui = {
 export const examplesFor = (answers) => {
   const byKind = {
     business: ["fitcenter", "lawyer-landing-page", "interior-design-studio"],
-    landing: ["lawyer-landing-page", "edie-homepage", "momentum-consulting"],
+    landing: ["lawyer-landing-page", "momentum-consulting", "fitcenter"],
     store: ["shoply", "arava-botanics", "nordwalk-3d-store"],
     portfolio: ["photo-gallery", "interior-design-studio", "george-dylan-tour-guide"],
-    webapp: ["sunyi-bali-resort", "nordwalk-3d-store", "weather-app"],
+    webapp: ["sunyi-bali-resort", "nordwalk-3d-store", "shoply"],
+    bugfix: ["vintage-store", "arava-botanics", "fitcenter"],
+    wix: ["george-dylan-tour-guide", "momentum-consulting", "arava-botanics"],
+    ai: ["sunyi-bali-resort", "nordwalk-3d-store", "interior-design-studio"],
     unsure: ["sunyi-bali-resort", "fitcenter", "shoply"],
   };
   const ids = [...(byKind[answers.kind] || byKind.unsure)];
