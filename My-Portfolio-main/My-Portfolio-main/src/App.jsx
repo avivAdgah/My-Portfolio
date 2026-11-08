@@ -5,6 +5,7 @@ import { LanguageProvider } from "./context/LanguageContext";
 import ScrollToHash from "./components/ScrollToHash";
 import WhatsAppButton from "./components/WhatsAppButton";
 import ProjectBot from "./components/ProjectBot";
+import Analytics from "./components/Analytics";
 import HomePage from "./pages/HomePage";
 import CaseStudyPage from "./pages/CaseStudyPage";
 
@@ -21,6 +22,7 @@ function App() {
             </Routes>
             <WhatsAppButton />
             <ProjectBot />
+            <Analytics />
           </BrowserRouter>
         </ThemeProvider>
       </LanguageProvider>

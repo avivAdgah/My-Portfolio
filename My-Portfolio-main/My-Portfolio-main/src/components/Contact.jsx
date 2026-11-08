@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useLanguage } from "../context/useLanguage";
 import translations from "../i18n/translations";
 import { WHATSAPP_NUMBER } from "./WhatsAppButton";
+import { trackEvent } from "../analytics";
 import "./Contact.css";
 
 const EMAIL = "avivadgha@gmail.com";
@@ -59,6 +60,7 @@ export default function Contact() {
       if (!response.ok) throw new Error(`Status ${response.status}`);
       setStatus("success");
       setForm(initialForm);
+      trackEvent("generate_lead", { form: "contact", project_type: projectType });
     } catch {
       setStatus("error");
     }
