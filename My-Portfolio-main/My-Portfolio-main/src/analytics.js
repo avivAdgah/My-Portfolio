@@ -1,6 +1,6 @@
 // Google Analytics 4. Paste the Measurement ID ("G-XXXXXXXXXX") here.
 // While it's empty, analytics and the consent banner stay switched off.
-export const GA_MEASUREMENT_ID = "";
+export const GA_MEASUREMENT_ID = "G-5K6SEJ9SZB";
 
 const CONSENT_KEY = "analytics-consent"; // "granted" | "denied"
 
