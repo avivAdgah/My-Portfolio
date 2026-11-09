@@ -2,7 +2,7 @@ const translations = {
   en: {
     consent: {
       title: "Cookie consent",
-      text: "🍪 Hi! I use cookies to see what visitors find useful and keep improving the site. Is that OK with you?",
+      text: "🍪 Hi there! This site uses cookies. Is that OK with you?",
       accept: "Sure",
       decline: "Essential only",
     },
@@ -221,7 +221,7 @@ const translations = {
   he: {
     consent: {
       title: "הסכמה לעוגיות",
-      text: "🍪 היי! אני משתמש בעוגיות כדי להבין מה מעניין את המבקרים ולהמשיך לשפר את האתר. זה בסדר מבחינתך?",
+      text: "🍪 היי! האתר משתמש בעוגיות. זה בסדר מבחינתך?",
       accept: "בטח",
       decline: "רק הכרחיות",
     },

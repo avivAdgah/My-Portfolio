@@ -20,14 +20,6 @@ export function setConsent(value) {
   } catch {
     // Storage unavailable (private mode) — the choice just won't persist.
   }
-  // Anonymous tally of choices (see netlify/functions/consent.mjs), so declines
-  // are counted too. No cookies or visitor details are sent.
-  fetch("/api/consent", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ choice: value }),
-    keepalive: true,
-  }).catch(() => {});
 }
 
 let loaded = false;
