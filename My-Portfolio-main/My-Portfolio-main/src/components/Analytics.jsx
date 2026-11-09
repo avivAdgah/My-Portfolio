@@ -92,6 +92,13 @@ export default function Analytics() {
         >
           {t.accept}
         </button>
+        <button
+          type="button"
+          className="btn btn-sm btn-secondary"
+          onClick={() => choose("denied")}
+        >
+          {t.decline}
+        </button>
       </div>
     </div>
   );

@@ -2,8 +2,9 @@ const translations = {
   en: {
     consent: {
       title: "Cookie consent",
-      text: "This site uses cookies.",
-      accept: "OK",
+      text: "🍪 Hi! I use cookies to see what visitors find useful and keep improving the site. Is that OK with you?",
+      accept: "Sure",
+      decline: "Essential only",
     },
     whatsapp: {
       label: "Chat on WhatsApp",
@@ -220,8 +221,9 @@ const translations = {
   he: {
     consent: {
       title: "הסכמה לעוגיות",
-      text: "האתר משתמש בעוגיות.",
-      accept: "אישור",
+      text: "🍪 היי! אני משתמש בעוגיות כדי להבין מה מעניין את המבקרים ולהמשיך לשפר את האתר. זה בסדר מבחינתך?",
+      accept: "בטח",
+      decline: "רק הכרחיות",
     },
     whatsapp: {
       label: "שלחו הודעה בוואטסאפ",
